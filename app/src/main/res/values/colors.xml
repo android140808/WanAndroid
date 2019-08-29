@@ -2,5 +2,22 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FF0000</color>
+    <color name="dark">#A9A9A9</color>
+    <color name="red">#FF0000</color>
+
+    <!--五种颜色-->
+    <color name="step_color">#FFF04523</color>
+    <color name="step_color_unit">#FFF4B1A0</color>
+    <color name="calories_color">#FFD70051</color>
+    <color name="calories_color_unit">#FFEEA0B8</color>
+    <color name="sleep_color">#FF172570</color>
+    <color name="sleep_color_unit">#FF5F6593</color>
+    <color name="disdance_color">#FF22AC38</color>
+    <color name="disdance_color_unit">#FF95D09B</color>
+    <color name="activity_color">#FF63C3CF</color>
+    <color name="activity_color_unit">#FFACDCE3</color>
+    <color name="heartrate_color">#ffe50212</color>
+    <color name="blue">#8A2BE2</color>
+
 </resources>
