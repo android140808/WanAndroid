@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF0000</color>
     <color name="dark">#A9A9A9</color>
     <color name="red">#FF0000</color>
+    <color name="white">#ffffff</color>
 
     <!--五种颜色-->
     <color name="step_color">#FFF04523</color>
@@ -19,5 +20,27 @@
     <color name="activity_color_unit">#FFACDCE3</color>
     <color name="heartrate_color">#ffe50212</color>
     <color name="blue">#8A2BE2</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="txt_unselect">#cdcdcd</color>
+    <color name="txt_select">#53C203</color>
+    <color name="color_gray_hint">#B2B2B2</color>
+    <color name="label1">#FEF6EE</color>
+    <color name="label2">#E9F9F0</color>
+    <color name="gray1">#f7f7f7</color>
+    <color name="background_gray_color">#f7f7f7</color>
+    <color name="divider">#EEEEEE</color>
+    <color name="black">#000000</color>
+
+    <color name="red1">#EE5B5B</color>
+
+    <color name="color_100">#333333</color>
+    <color name="color_107">#f2f3f4</color>
+    <color name="color_001">#1aa1fb</color>
+    <color name="color_106">#e5e5e5</color>
+    <color name="color_109">#ffffffff</color>
+    <color name="color_1002">#53C203</color>
+    <color name="load_error_line">#D8D8D8</color>
 
 </resources>

@@ -1,9 +1,12 @@
-package avater.appscomm.com.mywanandroids;
+package avater.appscomm.com.mywanandroids.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import avater.appscomm.com.mywanandroids.R;
+import avater.appscomm.com.mywanandroids.SportDataView;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
