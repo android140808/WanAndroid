@@ -28,6 +28,5 @@ public class TextFramentPresenter extends BaseMvpPresenter<ITextFragmentView> {
         if (mView == null) {
             return;
         }
-        iBannerModel.handleBanner();
     }
 }

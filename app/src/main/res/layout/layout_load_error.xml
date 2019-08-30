@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_error"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray1"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+
+    <ImageView
+        android:layout_width="158dp"
+        android:layout_height="132dp"
+        android:src="@mipmap/ic_load_error" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="5dp"
+        android:text="加载失败\n请重新加载"
+        android:textColor="#B0B0B0"
+        android:textSize="13sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_load"
+        android:layout_width="126dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/drawable_load_error_btn"
+        android:gravity="center"
+        android:text="重新加载"
+        android:textColor="#B0B0B0"
+        android:textSize="14sp" />
+
+</LinearLayout>

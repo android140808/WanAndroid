@@ -13,15 +13,17 @@ import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 
 import avater.appscomm.com.mywanandroids.R;
 import avater.appscomm.com.mywanandroids.base.BaseMvpActivity;
+import avater.appscomm.com.mywanandroids.fragment.HomeFragment;
 import avater.appscomm.com.mywanandroids.mvp.presenter.MainNewPresenter;
 import avater.appscomm.com.mywanandroids.mvp.view.IMainView;
 
-public class MainNewActivity extends BaseMvpActivity<IMainView, MainNewPresenter> implements BottomNavigationBar.OnTabSelectedListener,IMainView{
+public class MainNewActivity extends BaseMvpActivity<IMainView, MainNewPresenter> implements BottomNavigationBar.OnTabSelectedListener, IMainView {
 
     private BottomNavigationBar bottomNavigationBar;
     private FragmentManager mManager;
     private FragmentTransaction mTransaction;
     private LinearLayout flashView;
+    private HomeFragment homeFragment;
 
     @Override
     protected MainNewPresenter createPresenter() {
@@ -82,9 +84,27 @@ public class MainNewActivity extends BaseMvpActivity<IMainView, MainNewPresenter
 
     }
 
+    private void hideFragment(FragmentTransaction transaction) {
+        if (homeFragment != null) {
+            transaction.hide(homeFragment);
+        }
+    }
+
     @Override
     public void onTabSelected(int position) {
-
+        mTransaction = mManager.beginTransaction();
+        hideFragment(mTransaction);
+        switch (position) {
+            case 0:
+                if (homeFragment == null) {
+                    homeFragment = HomeFragment.newInstance();
+                    mTransaction.add(R.id.ll_content, homeFragment);
+                } else {
+                    mTransaction.show(homeFragment);
+                }
+                break;
+        }
+        mTransaction.commit();
     }
 
     @Override

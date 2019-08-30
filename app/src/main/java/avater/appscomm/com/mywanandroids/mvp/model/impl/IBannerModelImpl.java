@@ -8,8 +8,7 @@ import avater.appscomm.com.mywanandroids.internet.BaseObserver;
 import avater.appscomm.com.mywanandroids.internet.NetManager;
 import avater.appscomm.com.mywanandroids.mvp.model.IBannerModel;
 
-public class IBannerImpl implements IBannerModel {
-
+public class IBannerModelImpl implements IBannerModel {
     @Override
     public void handleBanner(final OnLoadDatasLostener<List<BannerBean.DataBean>> listener) {
         NetManager.INSTANCE.getBanner(new BaseObserver<List<BannerBean.DataBean>>() {
