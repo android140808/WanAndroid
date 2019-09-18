@@ -14,6 +14,9 @@ import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import avater.appscomm.com.mywanandroids.R;
 import avater.appscomm.com.mywanandroids.base.BaseMvpActivity;
 import avater.appscomm.com.mywanandroids.fragment.HomeFragment;
+import avater.appscomm.com.mywanandroids.fragment.NavigateFragment;
+import avater.appscomm.com.mywanandroids.fragment.PresionFragment;
+import avater.appscomm.com.mywanandroids.fragment.ProjectFragment;
 import avater.appscomm.com.mywanandroids.mvp.presenter.MainNewPresenter;
 import avater.appscomm.com.mywanandroids.mvp.view.IMainView;
 
@@ -24,6 +27,10 @@ public class MainNewActivity extends BaseMvpActivity<IMainView, MainNewPresenter
     private FragmentTransaction mTransaction;
     private LinearLayout flashView;
     private HomeFragment homeFragment;
+    private ProjectFragment projectFragment;
+    private NavigateFragment navigateFragment;
+    private PresionFragment presionFragment;
+
 
     @Override
     protected MainNewPresenter createPresenter() {
@@ -88,6 +95,15 @@ public class MainNewActivity extends BaseMvpActivity<IMainView, MainNewPresenter
         if (homeFragment != null) {
             transaction.hide(homeFragment);
         }
+        if (projectFragment != null) {
+            transaction.hide(projectFragment);
+        }
+        if (navigateFragment != null) {
+            transaction.hide(navigateFragment);
+        }
+        if (presionFragment != null) {
+            transaction.hide(presionFragment);
+        }
     }
 
     @Override
@@ -101,6 +117,31 @@ public class MainNewActivity extends BaseMvpActivity<IMainView, MainNewPresenter
                     mTransaction.add(R.id.ll_content, homeFragment);
                 } else {
                     mTransaction.show(homeFragment);
+                }
+                break;
+            case 1:
+                if (projectFragment == null) {
+                    projectFragment = ProjectFragment.newInstance();
+                    mTransaction.add(R.id.ll_content, projectFragment);
+                } else {
+                    mTransaction.show(projectFragment);
+                }
+                break;
+            case 2:
+                if (navigateFragment == null) {
+                    navigateFragment = NavigateFragment.newInstance();
+                    mTransaction.add(R.id.ll_content,
+                            navigateFragment);
+                } else {
+                    mTransaction.show(navigateFragment);
+                }
+            case 3:
+                if (presionFragment == null) {
+                    presionFragment = PresionFragment.newInstance();
+                    mTransaction.add(R.id.ll_content,
+                            presionFragment);
+                } else {
+                    mTransaction.show(presionFragment);
                 }
                 break;
         }
